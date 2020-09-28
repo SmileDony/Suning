@@ -680,19 +680,51 @@ color: #fff ;
     text-align: center;
 }
 /* 右侧侧拉信息框 */
-.sidebox{
+.sideBox{
     position: fixed;
     z-index: 4;
     top: 0;
     /* right: -280px; */
-    right: 35px;
+    right: 45px;
     width: 280px;
     height: 100%;
     background-color: greenyellow;
     box-shadow: 1px 0 4px #888;
     border-left: 1px solid #888;
 }
-
+.shopCarNumBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    height: 100%;
+    width: 280px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    background-color: hotpink;
+}
+.sideBoxTop{
+    height: 36px;
+    width: 280px;
+    margin:2px 14px 8px;
+    color: #666;
+    display: flex;
+    font-size: 12px;
+    background-color: red;
+    justify-content: space-between;
+    align-items: center;
+}
+.sideContentBox{
+    flex:1;
+    width: 280px;
+    background-color: #fff;
+}
+.sideBoxFoot{
+    height: 53px;
+    width: 280px;
+    background-color: red;
+}
 /* .tipbox{
     position: relative;
     left: 0;
