@@ -1,0 +1,63 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul,ol,li {
+	list-style: none;
+}
+
+img {
+	border:0;
+	vertical-align: middle;
+}
+
+a,u{
+	text-decoration: none;
+	color: #000000;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.allcenter{
+	width: 1210px;
+	margin: 0 auto;
+}
+.clc::after{
+	content: " ";
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.clc{
+	zoom:1;
+}
+body,h1,h2,h3,h4,h5,h6,p,ol,ul,dl,li,dt,dd,form,input,textarea,select,tr,td,th,fieldset,legend{
+	margin:0;
+	padding:0;
+}
+body{
+	font-size:16px;
+	font-family:"微软雅黑";
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size:16px;
+	font-weight:normal;
+}
+b,strong{
+	font-weight:normal;
+}
+i,em{
+	font-style:normal;
+}
+
+input,fieldset{
+	outline:none;
+}
