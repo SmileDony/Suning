@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品订单页</title>
+    <link rel="stylesheet" href="stylesheet/pc.css">
+    <link rel="stylesheet" href="stylesheet/test.css">
+    <link rel="stylesheet" type="text/css"  href="iconfont/iconfont.css">
+    <script src="jquery-1.11.3.js"></script>
+    <script type = "text/javascript" src="jquery.cookie.js"></script>
+    <script type = 'text/javascript' src = 'parabola.js'></script>
+</head>
+<body>
+    <header>
+        <div class="allcenter headtop">
+         <ul class="head-left ">
+             <li><a href="">返回首页</a></li>
+             <li><a href="">网站导航</a></li>
+             <li><a href="">商家入驻</a></li>
+             <li><a href="">客户服务</a></li>
+         </ul>
+         <ul class="head-right">
+             <li><a href="">请登录</a></li>
+             <li><a href="">注册有礼</a></li>
+             <li><a href="">我的订单</a></li>
+             <li><a href="">我的易购</a></li>
+             <li><a href="">苏宁会员</a></li>
+             <li><a href="">购物车</a></li>
+             <li><a href="">易付宝</a></li>
+             <li><a href="">企业采购</a></li>
+             <li><a href="">手机苏宁</a></li>
+         </ul>
+        </div>
+     </header>
+     <!-- content -->
+     <main>
+         <!-- 搜索框 -->
+         <!-- 结算清单 -->
+         <!-- 猜你喜欢 -->
+         <div class="goods_box allcenter">
+            <ul class="rankshop">
+                <!-- <li>
+                    <div class="goods_pic">
+                        <img src="${arr[0].childs[i].img}" alt="">
+                      </div>
+                      <div class="goods_title">
+                        <p>${arr[0].childs[i].name}</p>
+                      </div>
+                      <div class="goods_price">
+                        <p>￥${arr[0].childs[i].price}</p>
+                      </div>
+                      <div class="goods_btn">
+                          <i id="${arr[0].childs[i].id}" class="sc_btn iconfont">&#xe62e;</i>
+                      </div>
+                </li> -->
+            </ul>
+        </div>
+        <!-- 抛物线小球 -->
+        <div id = 'ball'></div>
+         <!-- 右边购物车 -->
+         <section class="sideBox">
+            <article class="shopCarNumBox">
+              <div class="sideBoxTop">
+                <input type="checkbox" id="checked-all">
+                <p>
+                  <span>共<u class="sum-num">2</u>件，已选<u class="check-sum">2</u>件</span>
+                </p>
+                <a href="">
+                  <span>查看全部</span>
+                </a>
+              </div>
+              <div class="sc_content">
+                <ul>
+                  
+                </ul>
+              </div>
+              <div class="sideBoxFoot">
+                <div class="cartinfro">
+                  <div class="cartinfro-left">
+                    <p id="checkedSum">已选&nbsp;<u>4</u>&nbsp;件</p>
+                    <p id="moneySum">总价:&nbsp;<u>122</u></p>
+                  </div>
+                  <a href="" class="ok">
+                    去购物车结算
+                    <!-- <i></i> -->
+                  </a>
+                </div>
+              </div>
+              <div class="sc_pic">
+                <!-- 购物车内商品的数量 -->
+                <div class="sc_num"> 0</div>
+              </div>
+            </article>
+          </section>
+     </main>
+        <!-- <button id = 'clearBtn'>清空购物车</button> -->
+    
+</body>
+<script src="test.js"></script>
+</html>

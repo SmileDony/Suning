@@ -329,11 +329,8 @@
                   <div class="goods_price">
                     <p>￥135.00</p>
                     <i id="0" class="sc_btn iconfont">&#xe62e;</i>
-                  </div> -->
-                  <!-- <div class="goods_count">
-                    <i id="0" class="sc_btn iconfont">&#xe62e;</i>
-                  </div> -->
-              </li>
+                  </div>  
+              </li> -->
             </ul>
         </article>
         <article id="part2">
@@ -445,7 +442,9 @@
           </a>
         </div>
         <div class="sideContentBox">
-  
+          <ul>
+            
+          </ul>
         </div>
         <div class="sideBoxFoot">
           <div class="cartinfro">
@@ -476,7 +475,28 @@
 
     
 </body>
+<script>
+   aClose.onclick = function () {
+        oDiv.setAttribute('style','animation:closeTime 1s ease-in-out 0ms 1 normal');
+        setTimeout(function () {
+            oDiv.removeAttribute('style');
+            oDiv.style.marginRight = "-128px";
+            aClose.style.display = "none";
+            aOpen.style.display = "block";
+        },1000);
+    };
+    aOpen.onclick = function () {
+        oDiv.setAttribute('style','animation:closeTime 1s ease-in-out 0ms 1 reverse');
+        setTimeout(function () {
+            oDiv.removeAttribute('style');
+            oDiv.style.marginRight = "0";
+            aClose.style.display = "block";
+            aOpen.style.display = "none";
+        },1000);
+    };
+</script>
 <script src="data.js"></script>
 <script src="goodslist.js"></script>
 <script src="nav.js"></script>
+<!-- <script src="flash.js"></script> -->
 </html>
