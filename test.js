@@ -83,8 +83,8 @@ $(function(){
       })
   
       //计算偏移位置：
-      var offsetX = $(".sc_content .sc_pic").offset().left - $("#ball").offset().left;
-      var offsetY =  $(".sc_content .sc_pic").offset().top - $("#ball").offset().top;
+      var offsetX = $(".shopcar #shopcarnum").offset().left - $("#ball").offset().left;
+      var offsetY =  $(".shopcar #shopcarnum").offset().top - $("#ball").offset().top;
   
       var bool = new Parabola({
         el: "#ball",
@@ -101,12 +101,19 @@ $(function(){
     }
   
     //右侧购物车移入移出效果
-    $(".sideBox").mouseenter(function(){
-      $(this).stop(true).animate({right: 35}, 500)
-    }).mouseleave(function(){
-      $(this).stop(true).animate({right: -270}, 500)
+    // $(".sideBox").mouseenter(function(){
+    //   $(this).stop(true).animate({right: 35}, 500)
+    // }).mouseleave(function(){
+    //   $(this).stop(true).animate({right: -270}, 500)
+    // })
+    $(".shopcar").click(function(){
+      $(".sideBox").stop(true).animate({right: 35}, 500)
+      $(".snbar").stop(true).animate({left: -315}, 500)
     })
-  
+    $(".snbar").click(function(){
+      $(".sideBox").stop(true).animate({right: -270}, 500)
+      $(".snbar").stop(true).animate({left: 0}, 500)
+    })
   
     //给右侧购物车的删除按钮添加点击
     $(".sc_content ul").on("click", ".delete_goodsBtn", function(){
@@ -225,6 +232,7 @@ $(function(){
       // var goods_money=$(".sc_goodscont").children(".sc_goodsNum").children("p").html();
       // var goods_num=$(".sc_goodscont").children(".sc_goodsNum").children("div").children("span").html();
       // var money=goods_money * goods_num;
+      $(".shopcar #shopcarnum").html(sum);
       $(".shopCarNumBox .sc_num").html(sum);
       $(".sideBoxTop .sum-num").html(sum);
       // num=sum;

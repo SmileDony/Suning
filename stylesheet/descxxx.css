@@ -1,0 +1,585 @@
+@charset "utf-8";
+html,body{
+	height: 100%;
+}
+body{
+    background-color: #f2f2f2;
+}
+/* header */
+header{
+    height: 40px;
+    background-color: #f5f5f5;
+    position: relative;
+}
+.active{
+    color: #e42e3c;
+}
+header ul li:hover{
+   
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+header ul li:nth-child(1):hover{
+    color: #e42e3c;
+}
+header ul li:nth-child(1):hover a{
+    color: #e42e3c;
+}
+header div{
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666666;
+}
+.headtop{
+    position: relative;
+    height: 40px;
+}
+.headtop ul>li{
+    width: 70px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+}
+.web{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 185px;
+    z-index: 3;
+    min-width: 990px;
+    height: 180px;
+    padding: 5px 20px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #eee;
+    border-top: none;
+    
+}
+.web dl{
+    float: left;
+    width: 185px;
+    height: 160px;
+    padding: 0 4px;
+    border-right: 1px solid #eee;
+}
+.web dl:nth-child(5){
+    border: none;
+}
+.web dl dt{
+    /* text-align: left; */
+    font-size: 14px;
+    width: 180px;
+    height: 36px;
+    line-height: 36px;
+
+}
+.web dl dd{
+    
+    font-size: 12px;
+    width: 180px;
+    height: 140px;
+    overflow: hidden;
+}
+.web dl dd a{
+    text-align: center;
+    display: block;
+    width: 75px;
+    height: 20px;
+    line-height: 20px;
+    float: left;
+}
+.web dl dd a:hover{
+    color: red;
+    cursor: pointer;
+}
+.headtop ul li:hover div{
+    display: block;
+}
+/* 商家入驻 */
+.merchant{
+    width: 140px;
+    height: 96px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 324px;
+    z-index: 3;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #eee;
+    border-top: none;
+    overflow: hidden;
+}
+.merchant a{
+    text-align: center;
+    display: block;
+    width: 68px;
+    height: 24px;
+    line-height: 24px;
+    float: left;
+    
+}
+.merchant a:hover{
+    color: red;
+}
+/* 订单 */
+.order{
+    width: 70px;
+    height: 96px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 904px;
+    z-index: 3;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #eee;
+    border-top: none;
+    overflow: hidden;
+}
+.order a{
+    text-align: center;
+    display: block;
+    width: 68px;
+    height: 24px;
+    line-height: 24px;
+    float: left; 
+}
+.order a:hover{
+    color: red;
+}
+/* 我的易购 */
+.mine{
+    width: 138px;
+    height: 150px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 906px;
+    z-index: 3;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #eee;
+    border-top: none;
+    overflow: hidden; 
+}
+.mine img{
+    width: 40px;
+    height: 40px;
+}
+.mine a{
+  
+    display: block;
+    width: 68px;
+    margin: 0 auto;
+    text-align: center;
+    /* height: 24px;
+    line-height: 24px; */
+    float: left; 
+}
+.mine a:hover{
+    color: red;
+}
+/* 手机扫一扫 */
+.scan{
+    width: 420px;
+    height: 120px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 3;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #eee;
+    border-top: none;
+    overflow: hidden;
+}
+.scan img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    float: left;
+}
+/* 图标整体调整 */
+.headtop i{
+    font-size: 14px;
+}
+.headtop em{
+    font-size: 12px;
+}
+.headtop ul li:hover em{
+    transform: rotateY(180deg);
+}
+.head-left{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.head-right{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#headcont{
+    width: 100%;
+    background-color: white;
+    height: 138px;
+}
+/* headMidBox */
+.headMidBox{
+    display: flex;
+    height: 100px;
+    background-color: #ffffff;
+    justify-content: space-around;
+    align-items: center;
+}
+.headMidBox img:nth-child(1){
+    width: 190px;
+    height: 100px;
+}
+.headMidBox img:nth-child(2){
+    width: 66px;
+    height: 24px;
+   
+}
+/* .headMidBox img:nth-child(3){
+    width: 75px;
+    height: 75px;
+} */
+/* searchbox */
+.searchBox{
+    display: flex;
+    width: 500px;
+    height: 40px;
+}
+
+.search-left{
+    width: 398px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #e42e3c;
+    border-right: none;
+    padding-left: 10px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.search-left i{
+    color: #ccd2d9;
+}
+#txt{
+    width: 280px;
+    height: 34px;
+    text-indent:10px;
+    border: none;
+}
+#btn{
+    width: 100px;
+    height: 40px;
+    border: 2px solid #e42e3c;
+    background-color: #e42e3c;
+    color: white;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.shoplist{
+    display: flex;
+    font-size: 12px;
+    color: #999999;
+    margin: 10px 0 0;
+    width: 350px;
+}
+.shoplist li{
+    width:70px;
+}
+.shoplist li a{
+   display: block;
+   text-align: center;
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    border-right: 1px solid #999999;
+    padding: 0 10px;
+}
+.shoplist li:nth-of-type(7) a{
+    border-right: none;
+}
+/* head-nav */
+#headFoot{
+    background-color: #fff;
+    height: 38px;
+    display: flex;
+}
+.navtitle{
+    display: flex;
+    width: 200px;
+    padding: 10px;
+    background-color: #e42e3c;
+    align-items: center;
+    font-size: 14px;
+}
+.navtitle i{
+    color: #ffffff;
+}
+.navtitle div{
+    padding-left: 10px;
+    color: #fff;
+    font-weight: 900;
+}
+.hfnav{
+    display: flex;
+    align-self: center;
+    margin: 0 20px;
+}
+.hfnav li{
+    width: 125px;
+}
+.hfnav li a{
+    display: block;
+    text-align: center;
+    border-right:1px solid #ccc;
+    font-size: 15px;  
+    color: #333;
+    padding:0 10px;
+}
+.hfnav li:nth-of-type(4) a{
+    border-right: none;
+}
+.shoptags{
+    height: 40px;
+}
+.shoptags ul{
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+.shoptags ul li{
+    height: 20px;
+    font-size: 12px;
+   padding: 0 20px;
+}
+.descontent{
+   height: 700px;
+   color: #333;
+   position: relative;
+   background: #fff;
+}
+.descontbox{
+    display: flex;
+    flex-flow: row;
+    position: relative;
+}
+.des-shopleft{
+    width: 398px;
+    height: 520px;
+    position: relative;
+}
+#small {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    position: relative;
+}
+
+#small img {
+    width: 400px;
+    height: 400px;
+}
+
+#mark {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+
+#big {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    border: 1px solid black;
+    left: 410px;
+    top: 100px;
+    display: none;
+    overflow: hidden;
+}
+
+#big img {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    z-index: 2;
+}
+.des-shopmid{
+    width: 570px;
+    height: 520px;
+    position: absolute;
+    /* background: #e42e3c; */
+    top: 0;
+    left: 410px;
+    padding: 10px;
+   
+}
+.des-mid-1{
+    height:70px;
+    font-size: 12px;
+    line-height: 24px;
+}
+.des-mid-2{
+    height: 120px;
+    padding-top: 10px;
+    background: #FFF8F3;
+}
+.div-p{
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    width: 280px;
+    justify-content: space-around;
+}
+.div-p aside{
+    font-size: 30px;
+    color: red;
+    font-weight: 900;
+}
+.div-h{
+    font-size: 12px;
+    color: #666;
+    padding:10px 20px;
+    display: flex;
+    align-items: center;
+    width: 240px;
+    justify-content: space-around;
+}
+.div-t{
+    display: block;
+    width: 70px;
+    color: #999;
+    font-size: 12px;
+   
+}
+.des-mid-3{
+    height: 100px;
+    font-size: 12px;
+    color: #666;
+    padding: 10px;
+    display: flex;
+}
+.div-cont span{
+    display: block;
+    height: 20px;
+}
+.div-cont ul li{
+    height: 24px;
+    line-height: 24px;
+}
+.tips{
+    display: inline-block;
+    width: 50px;
+    height: 16px;
+    border: 1px solid #FF6600;
+    color: #FF6600;
+    font-size: 12px;
+    line-height:16px;
+    text-align: center;
+    vertical-align: middle;
+}
+.des-mid-4{
+    height: 56px;
+    font-size: 12px;
+    color: #666;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+    /* display: flex; */
+    /* justify-content: space-around; */
+}
+/* .des-mid-4>p{
+    width:200px;
+    height: 32px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+} */
+.des-mid-4>p div{
+    padding: 10px;
+    height: 12px;
+    line-height: 12px;
+}
+.des-mid-5{
+    height: 120px;
+    border-bottom: 1px solid #ccc;
+}
+.mid-5-top{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+.des-mid-5 .des-count{
+    display: flex;
+    height: 30px;
+    width:80px;
+    justify-content: space-around;
+    align-items: center;
+}
+.des-mid-5 .des-count button{
+    /* 加减按钮样式 */
+    outline:none;
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid rgba(153, 153,153);
+    color:rgba(153, 153,153);
+    font-size: 12px;
+    /* visibility: hidden; */
+}
+.des-mid-5 .des-count span{
+    display: block;
+    width:40px;
+    height: 20px;
+    text-align: center;
+}
+.mid-5-bottom{
+    height: 60px;
+    width: 300px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+}
+.mid-5-bottom a{
+    display: block;
+    font-size: 16px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+}
+.des-mid-6{
+    display: flex;
+    padding: 0 10px;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    /* text-align: center; */
+    color: #666;
+}
+.des-mid-6 aside{
+    padding-right: 10px;
+}

@@ -5,20 +5,215 @@ html,body{
 /* body{
     background-color: #f2f2f2;
 } */
+
 /* header */
 header{
-    height: 48px;
+    height: 40px;
     background-color: #f5f5f5;
+    position: relative;
+}
+.active{
+    color: #e42e3c;
+}
+header ul li:hover{
+   
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+header ul li:nth-child(1):hover{
+    color: #e42e3c;
+}
+header ul li:nth-child(1):hover a{
+    color: #e42e3c;
 }
 header div{
     display: flex;
-    height: 48px;
+    height: 40px;
     justify-content: space-between;
     font-size: 12px;
     color: #666666;
 }
+.headtop{
+   position: relative;
+    height: 40px;
+}
 .headtop ul>li{
-    width: 60px;
+    width: 70px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+}
+.web{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 185px;
+    z-index: 3;
+    min-width: 990px;
+    height: 180px;
+    padding: 5px 20px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #eee;
+    border-top: none;
+    
+}
+.web dl{
+    float: left;
+    width: 185px;
+    height: 160px;
+    padding: 0 4px;
+    border-right: 1px solid #eee;
+}
+.web dl:nth-child(5){
+    border: none;
+}
+.web dl dt{
+    /* text-align: left; */
+    font-size: 14px;
+    width: 180px;
+    height: 36px;
+    line-height: 36px;
+
+}
+.web dl dd{
+    
+    font-size: 12px;
+    width: 180px;
+    height: 140px;
+    overflow: hidden;
+}
+.web dl dd a{
+    text-align: center;
+    display: block;
+    width: 75px;
+    height: 20px;
+    line-height: 20px;
+    float: left;
+}
+.web dl dd a:hover{
+    color: red;
+    cursor: pointer;
+}
+.headtop ul li:hover div{
+    display: block;
+}
+/* 商家入驻 */
+.merchant{
+    width: 140px;
+    height: 96px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 324px;
+    z-index: 3;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #eee;
+    border-top: none;
+    overflow: hidden;
+}
+.merchant a{
+    text-align: center;
+    display: block;
+    width: 68px;
+    height: 24px;
+    line-height: 24px;
+    float: left;
+    
+}
+.merchant a:hover{
+    color: red;
+}
+/* 订单 */
+.order{
+    width: 70px;
+    height: 96px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 904px;
+    z-index: 3;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #eee;
+    border-top: none;
+    overflow: hidden;
+}
+.order a{
+    text-align: center;
+    display: block;
+    width: 68px;
+    height: 24px;
+    line-height: 24px;
+    float: left; 
+}
+.order a:hover{
+    color: red;
+}
+/* 我的易购 */
+.mine{
+    width: 138px;
+    height: 150px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 906px;
+    z-index: 3;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #eee;
+    border-top: none;
+    overflow: hidden; 
+}
+.mine img{
+    width: 40px;
+    height: 40px;
+}
+.mine a{
+  
+    display: block;
+    width: 68px;
+    margin: 0 auto;
+    text-align: center;
+    /* height: 24px;
+    line-height: 24px; */
+    float: left; 
+}
+.mine a:hover{
+    color: red;
+}
+/* 手机扫一扫 */
+.scan{
+    width: 420px;
+    height: 120px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 3;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #eee;
+    border-top: none;
+    overflow: hidden;
+}
+.scan img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    float: left;
+}
+/* 图标整体调整 */
+.headtop i{
+    font-size: 14px;
+}
+.headtop em{
+    font-size: 12px;
+}
+.headtop ul li:hover em{
+    transform: rotateY(180deg);
 }
 .head-left{
     display: flex;
@@ -119,6 +314,161 @@ i.sc_btn{
 
 } 
 /* 右侧购物车样式 */
+/*右边购物车 */
+.shopcarbox{
+    z-index: 10;
+    height: 100%;
+    width: 35px;
+    position: fixed;
+    top:0;
+    right: 0;
+    background-color: #383838 ;
+    /* display: flex;
+    flex-flow: column;
+    justify-content: space-around; */
+    font: 12px/1.5 arial,tahoma,\5b8b\4f53;
+}
+.snbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    width: 35px;
+    height: 150px;
+    cursor: pointer;
+}
+.shopcarbox div{
+   color:#ffaa00;
+   z-index: 8;
+   position: absolute; 
+} 
+.shopcarbox p{
+    position: relative;
+    z-index: 6;
+}
+.shopcarbox div em{
+    position: relative;
+    color:#ffaa00 ;
+    z-index: 8;
+    font-size: 20px;
+    padding: 0 7px;
+    text-align: center;
+    /* z-index: 4; */
+}
+.shopcarbox div p:hover em{
+   color: #fff!important;
+   background-color:#ffaa00;
+}
+
+.shopcarbox div span{
+    display: block;
+    z-index: 6;
+    width:100px;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    position: absolute;
+    padding: 2px 4px;
+    left:35px;
+    top: 0;
+    background-color:#ffaa00;
+    color: red;
+    transition:left 0.4s;
+}
+.shopcarbox div:nth-of-type(6) p span.download{
+    position: absolute;
+    width:160px ;
+    height:236px;
+    top:0;
+    background: url(../images/ia_100000751.png) no-repeat;
+}
+.shopcarbox p:hover span{
+   left: -36px;
+}
+.shopcarbox div:nth-of-type(6) p:hover span{
+    left: -60px;
+}
+.download img{
+    position: absolute;
+    top:30%;
+    left: 12%;
+}
+.shopcarbox div:nth-of-type(6) p span.download{
+    left: 160px;
+    top:-180px;
+}
+.shopcarbox div:nth-of-type(6) p:hover span.download{
+    left: -160px;
+    top:-180px;
+}
+.snbar img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 150px;
+}
+.shopcar{
+    z-index: 10;
+    color: #fff!important;
+    position: absolute;
+    top: 25%;
+    height: 117px;
+    width: 29px;
+    padding: 0 3px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: #383838;
+    cursor: pointer;
+}
+.shopcar:hover{
+    background-color: #ffaa00 ;
+}
+
+.shopcar aside{
+    display: block;
+    width: 12px;
+    padding: 0 8.5px;
+    margin: 0 auto;
+    color: #FFF;
+}
+.shopcar #shopcarnum{
+    display: inline-block;
+    min-width: 17px;
+    height: 15px;
+    padding: 0 2px;
+    background-color: #D00;
+    color: #FFF;
+    line-height: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.returntop{
+    z-index: 10;
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* margin: 0 auto; */
+    background: #383838;
+}
+.returntop:hover{
+    background-color: #ffaa00 ;
+  
+}
+.returntop:hover i{ 
+     color: #fff !important;
+    }
+.returntop i{
+    color: #ffaa00;
+    font-size: 20px;
+    padding: 0 7px;
+    text-align: center;
+}
+
+
 /* 右侧侧拉信息框 */
 .sideBox{
     position:fixed;
@@ -128,7 +478,7 @@ i.sc_btn{
     /* right: 45px; */
     width: 280px;
     height: 100%;
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
     box-shadow: 1px 0 4px #888;
     border-left: 1px solid #888;
 }
@@ -159,7 +509,7 @@ i.sc_btn{
     flex:1;
     overflow: auto;
     width: 280px;
-    padding-left: 10px;
+    padding-left: 4px;
     background-color: #fff;
 }
 .sideBoxFoot{
@@ -235,7 +585,7 @@ i.sc_btn{
 .sc_goodscont{ 
    height: 60px;
    width: 150px;
-   padding: 5px;
+   padding: 2px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -283,6 +633,7 @@ i.sc_btn{
     height: 12px;
     border-radius: 50%;
     cursor: pointer;
+    align-self: start;
 }
 .delete_goodsBtn:hover{
     background-color: #e42e3c;
@@ -336,6 +687,7 @@ i.sc_btn{
     /* 侧边每一条商品信息框 */
     display: flex;
     justify-content: space-around;
+    align-items: center;
     height: 100px;
 }
 #ball{
