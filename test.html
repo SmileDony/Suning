@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品订单页</title>
-    <link rel="stylesheet" href="stylesheet/pc.scss">
-    <link rel="stylesheet" href="stylesheet/test.scss">
+    <link rel="stylesheet" href="stylesheet/pc.css">
+    <link rel="stylesheet" href="stylesheet/test.css">
     <link rel="stylesheet" type="text/css"  href="iconfont/iconfont.css">
     <script src="jquery-1.11.3.js"></script>
     <script type = "text/javascript" src="jquery.cookie.js"></script>
@@ -174,8 +174,87 @@
      <!-- content -->
      <main>
          <!-- 搜索框 -->
-         
+         <section class="headMidBox allcenter">
+          <img src="images/ia_100000005.png" alt="">
+          <img src="images/苏宁首页_03.png" alt="">
+         <div>
+              <!-- 搜索框 -->
+          <form class="searchBox">
+              <div class="search-left">
+                  <i class="iconfont">&#xe60b;</i>
+                  <input type="text" value="" id="txt" placeholder="千万好货五折起">
+              </div>
+              <input type="submit" value="搜索" id="btn">
+          </form>
+          <!-- shoplist -->
+          <ul class="shoplist">
+              <li><a href="">白酒</a></li>
+              <li><a href="">牛奶</a></li>
+              <li><a href="">大米</a></li>
+              <li><a href="">零食</a></li>
+              <li><a href="">茅台</a></li>
+              <li><a href="">牛肉</a></li>
+              <li><a href="">抽纸</a></li>
+          </ul>
+         </div>
+          <img src="images/ia_100000007.jpg" alt="">
+      </section>
          <!-- 结算清单 -->
+         <section class="orderbox allcenter">
+          <ul class="orderboxtop">
+            <li>
+              <input type="checkbox" class="check-ok-all">
+              <span>全选</span>
+            </li>
+            <li>商品信息</li>
+            <li>规格</li>
+            <li>单价（元）</li>
+            <li>数量</li>
+            <li>小计（元）</li>
+            <li>操作</li>
+          </ul>
+          <!-- <ul class="orderboxbottom">
+            <li>
+                <input type="checkbox">
+                <div class="sc_goodsPic">
+                  <img src="${newArr[i].img}" alt="">
+                </div>
+              <div class="sc_goodscont">
+                  <div class="sc_goodsTitle">
+                    <p>${newArr[i].name}</p>
+                  </div>
+                <div class="sc_goodsNum">
+                  <div>
+                      <button>+</button>
+                      <span>${newArr[i].num}</span>
+                      <button>-</button>
+                  </div>
+                  <p>￥<b>${newArr[i].price}</b></p>
+                </div>
+              </div> 
+              <div class="delete_goodsBtn">X</div>
+            </li>
+          </ul> -->
+          <ul class="orderboxbottom">
+            <li>
+                <div class="yes">
+                  <input type="checkbox">
+                </div>
+                <div class="goodsPic">
+                  <img src="images/ia_100000016.jpg" alt="">
+                  <a>西西猫膨润土猫砂10公斤除臭结团猫沙膨润土低尘猫砂20斤10kg猫咪用品</a>
+                </div>
+                <p class="uint-price">￥<b>149</b></p>
+                <div class="goodsNum">
+                    <button>+</button>
+                    <span>1</span>
+                    <button>-</button>
+                </div>
+                <p class="sum-price">￥<b>149</b></p>  
+              <div class="delete">删除</div>
+            </li>
+          </ul>
+         </section>
          <!-- 猜你喜欢 -->
          <div class="goods_box allcenter">
             <ul class="rankshop">
@@ -283,4 +362,5 @@
     
 </body>
 <script src="test.js"></script>
+<script src="order.js"></script>
 </html>

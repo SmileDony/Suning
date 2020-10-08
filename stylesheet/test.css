@@ -230,8 +230,151 @@ header div{
     background-color: white;
     height: 138px;
 }
+/* headMidBox */
+.headMidBox{
+    display: flex;
+    height: 100px;
+    background-color: #ffffff;
+    justify-content: space-around;
+    align-items: center;
+}
+.headMidBox img:nth-child(1){
+    width: 190px;
+    height: 100px;
+}
+.headMidBox img:nth-child(2){
+    width: 66px;
+    height: 24px;
+   
+}
+/* .headMidBox img:nth-child(3){
+    width: 75px;
+    height: 75px;
+} */
+/* searchbox */
+.searchBox{
+    display: flex;
+    width: 500px;
+    height: 40px;
+}
 
+.search-left{
+    width: 398px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #e42e3c;
+    border-right: none;
+    padding-left: 10px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.search-left i{
+    color: #ccd2d9;
+}
+#txt{
+    width: 280px;
+    height: 34px;
+    text-indent:10px;
+    border: none;
+}
+#btn{
+    width: 100px;
+    height: 40px;
+    border: 2px solid #e42e3c;
+    background-color: #e42e3c;
+    color: white;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.shoplist{
+    display: flex;
+    font-size: 12px;
+    color: #999999;
+    margin: 10px 0 0;
+    width: 350px;
+}
+.shoplist li{
+    width:70px;
+}
+.shoplist li a{
+   display: block;
+   text-align: center;
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    border-right: 1px solid #999999;
+    padding: 0 10px;
+}
+.shoplist li:nth-of-type(7) a{
+    border-right: none;
+}
+/* 购物车结算表格 */
+.orderbox{
 
+}
+.orderboxtop{
+    height: 32px;
+    border: 4px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+
+}
+.orderboxtop li{
+    /* padding: 0 10px; */
+    width: 100px;
+}
+.orderboxtop li:nth-child(1) {
+    display: flex;
+    padding-left: 20px;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.orderboxtop li:nth-child(2){
+    width: 300px;
+    text-align: center;
+}
+.orderboxtop li:nth-child(1) span{
+    padding-left: 10px;
+
+}
+/* 购买商品清单 */
+.orderboxbottom li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 110px;
+    padding: 15px 10px;
+    font-size: 14px;
+    color: #666;
+    border: 1px solid #ffaa00;
+    background-color: #fffbf2;
+    margin: 10px 0;
+}
+.yes{
+    width: 20px;
+    height: 80px;
+    /* padding-left:15px; */
+}
+.goodsPic{
+    width: 330px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.goodsPic img{
+    width: 80px;
+    height: 80px;
+}
+.goodsPic a{
+    display:block;
+    padding-left: 20px;
+    width: 200px;
+}
+/* 商品列表 */
 .rankshop{
     height: 610px;
     display: flex;

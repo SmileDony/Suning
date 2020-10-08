@@ -277,25 +277,6 @@ $(function(){
     console.log(money);
     console.log(goods_money);
   }
-// 动画函数
-//    aClose.onclick = function () {
-//         oDiv.setAttribute('style','animation:closeTime 1s ease-in-out 0ms 1 normal');
-//         setTimeout(function () {
-//             oDiv.removeAttribute('style');
-//             oDiv.style.marginRight = "-128px";
-//             aClose.style.display = "none";
-//             aOpen.style.display = "block";
-//         },1000);
-//     };
-//     aOpen.onclick = function () {
-//         oDiv.setAttribute('style','animation:closeTime 1s ease-in-out 0ms 1 reverse');
-//         setTimeout(function () {
-//             oDiv.removeAttribute('style');
-//             oDiv.style.marginRight = "0";
-//             aClose.style.display = "block";
-//             aOpen.style.display = "none";
-//         },1000);
-//     };
 
 //全选按钮选中状态判断sideBoxTop
 $(".sideBoxTop").on("input","#checked-all",checkall);
