@@ -4,8 +4,8 @@ $(function(){
     }).mouseleave(function(){
       $("#mark,#big").hide();
     }).mousemove(function(ev){
-      var l = ev.clientX - $(this).offset().left;
-      var t = ev.clientY - $(this).offset().top;
+      var l = ev.clientX - $(this).offset().left-50;
+      var t = ev.clientY - $(this).offset().top-50;
       //限制出界
       l = Math.max(0, l);
       l = Math.min(300, l);

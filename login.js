@@ -122,10 +122,3 @@ window.onload = function() {
 
     }
 }
-//条款同意验证
-var oCheck = document.getElementById("check");
-var okCheck = document.getElementById("ok");
-var sub = document.getElementById("submit");
-if (!oCheck.checked) {
-sub.setAttribute('type', 'submit');
-}

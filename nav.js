@@ -1,4 +1,6 @@
-$(function(){
+define(["jquery","jquery-cookie"], function($){
+  function body(){
+  $(function(){
    
     $('#leftnav li').mouseenter(function(){
         var index = $(this).index();
@@ -52,4 +54,8 @@ $(function(){
   }
 }    
 )
- 
+}
+return {
+  body:body  
+ }
+})   

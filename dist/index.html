@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>苏宁首页</title><link rel="stylesheet" href="stylesheet/pc.css"><link rel="stylesheet" href="stylesheet/index.css"><link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"><script src="jquery-1.11.3.js"></script><script type="text/javascript" src="jquery.cookie.js"></script><script type="text/javascript" src="parabola.js"></script><!-- <script src = 'js/require.js' defer async = 'true' data-main = 'js/main.js'></script> --></head><script>// 轮播图
+    $(function () {
+    //  var aBtns = $(".play").find("ol li");
+    //  var oUl = $(".play").find("ul");
+     var aBtns=$("#bannerPoint").find("li");
+     var oUl=$("#bannerImg");
+     var iNow = 0;
+     var timer = null;
+     var left=document.documentElement.clientWidth;
+
+
+     $(".play").mouseenter(function () {
+       clearInterval(timer);
+     });
+
+     $(".play").mouseleave(function () {
+       //轮播
+       timer = setInterval(function () {
+         iNow++;
+         tab();
+       }, 2000);
+     });
+
+     aBtns.click(function () {
+       iNow = $(this).index();
+       tab();
+     });
+
+     //轮播
+     timer = setInterval(function () {
+       iNow++;
+       tab();
+     }, 2000);
+
+     function tab() {
+       aBtns.removeClass("active").eq(iNow).addClass("active");
+
+       if (iNow == aBtns.size()) {
+         aBtns.eq(0).addClass("active");
+       }
+
+       oUl.animate(
+         {
+           left: iNow * -left,
+           
+         },
+         500,
+         function () {
+           //判断是否是最后一张图片
+           if (iNow === aBtns.size()) {
+             iNow = 0;
+             oUl.css("left", 0);
+           }
+         }
+       );
+     }
+   });</script><body><!-- header --><header><div class="allcenter headtop"><ul class="head-left"><li><i class="iconfont">&#xe61b;</i> <a href="">返回首页</a></li><li><a href="">网站导航</a> <em class="iconfont">&#xe505;</em><div class="web"><dl><dt>特色购物</dt><dd><a>苏宁互联</a> <a>苏宁卡</a> <a>易回收</a> <a>领券中心</a> <a>导购指南</a> <a>苏宁达人</a> <a>苏宁国际</a> <a>二手优品</a> <a>苏宁outlets</a></dd></dl><dl><dt>主题频道</dt><dd><a>电器城</a> <a>手机</a> <a>图书</a> <a>美妆个护</a> <a>服装城</a> <a>家装馆</a> <a>排行榜</a> <a>苏宁超市</a> <a>运动馆</a> <a>红孩子母婴</a> <a>电脑</a> <a>智能生活</a> <a>苏宁汽车</a> <a>医药馆</a></dd></dl><dl><dt>生活助手</dt><dd><a>零钱宝</a> <a>转账还款</a> <a>水电煤</a> <a>机票</a> <a>酒店</a> <a>手机充值</a> <a>约服务</a> <a>保险</a> <a>门店查询</a></dd></dl><dl><dt>会员服务</dt><dd><a>会员联盟</a> <a>易付宝</a> <a>苏宁理财</a> <a>苏宁金融</a> <a>延期保修</a></dd></dl><dl><dt>更多热点</dt><dd><a>pp视频</a> <a>苏宁联盟</a> <a>苏宁云</a> <a>苏宁公益</a> <a>合作招商</a> <a>用户体验</a> <a>苏宁足球</a> <a>苏宁体验</a> <a>苏宁有货</a></dd></dl></div></li><li><a href="">商家入驻</a> <em class="iconfont">&#xe505;</em><div class="merchant"><a href="">合作招商</a> <a href="">服务市场</a> <a href="">金融中心</a> <a href="">培训中心</a> <a href="">易通天下</a> <a href="">规则中心</a> <a href="">规则众议院</a></div></li><li><a href="">客户服务</a> <em class="iconfont">&#xe505;</em><div class="merchant"><a href="">苏宁帮客</a> <a href="">帮助中心</a> <a href="">退换/维修</a> <a href="">意见反馈</a> <a href="">30天包退</a> <a href="">售后无忧</a> <a href="">在线咨询</a></div></li></ul><ul class="head-right"><li><a href="">请登录</a></li><li><a href="" class="active">注册有礼</a></li><li><a href="">我的订单</a> <em class="iconfont">&#xe505;</em><div class="order"><a href="">待支付</a> <a href="">待收货</a> <a href="">待评价</a> <a href="">修改订单</a></div></li><li><a href="">我的易购</a> <em class="iconfont">&#xe505;</em><div class="mine"><img src="images/ia_100000000.png" alt=""> <a href="">请登录</a> <a href="">我的消息</a> <a href="">我的关注</a> <a href="">我的金融</a> <a href="">苏宁会员</a> <a href="">我的任性付</a> <a href="">我的会员</a></div></li><li><a href="">苏宁会员</a></li><li class="active"><i class="iconfont">&#xe62e;</i> <a href="" class="active">购物车</a></li><li><a href="">易付宝</a></li><li><a href="">企业采购</a></li><li><a href="">手机苏宁</a> <em class="iconfont">&#xe505;</em><div class="scan"><img src="images/ia_100000001.jpg" alt=""> <img src="images/ia_100000002.jpg" alt=""> <img src="images/ia_100000003.jpg" alt=""> <img src="images/ia_100000004.png" alt=""></div></li></ul></div></header><div id="headcont"><!-- search --><section class="headMidBox allcenter"><img src="images/ia_100000005.png" alt=""> <img src="images/苏宁首页_03.png" alt=""><div><!-- 搜索框 --><form class="searchBox"><div class="search-left"><i class="iconfont">&#xe60b;</i> <input type="text" id="txt" placeholder="千万好货五折起"></div><input type="submit" value="搜索" id="btn"></form><!-- shoplist --><ul class="shoplist"><li><a href="">白酒</a></li><li><a href="">牛奶</a></li><li><a href="">大米</a></li><li><a href="">零食</a></li><li><a href="">茅台</a></li><li><a href="">牛肉</a></li><li><a href="">抽纸</a></li></ul></div><img src="images/ia_100000007.jpg" alt=""></section><!-- head-nav --><div id="headFoot" class="allcenter"><div class="navtitle"><i class="iconfont">&#xe653;</i><div>苏宁超市频道分类</div></div><ul class="hfnav"><li><a href="">超市首页</a></li><li><a href="">苏宁健康</a></li><li><a href="">特色馆</a></li><li><a href="">自有好物</a></li></ul></div></div><!-- 轮播图 --><section class="bannerBox"><!-- 图片轮播 --><div class="play" id="play"><ul id="bannerImg"><!-- 左右都能够进行循环轮播效果 --><li><a href=""><img src="images/ia_100000013.jpg" alt=""></a></li><li><a href=""><img src="images/ia_100000008.jpg" alt=""></a></li><li><a href=""><img src="images/ia_100000009.jpg" alt=""></a></li><li><a href=""><img src="images/ia_100000010.jpg" alt=""></a></li><li><a href=""><img src="images/ia_100000011.jpg" alt=""></a></li><li><a href=""><img src="images/ia_100000012.jpg" alt=""></a></li><li><a href=""><img src="images/ia_100000013.jpg" alt=""></a></li><li><a href=""><img src="images/ia_100000008.jpg" alt=""></a></li></ul><ol id="bannerPoint"><li class="active"></li><li></li><li></li><li></li><li></li><li></li></ol><div id="leftRightTabs"><a href="#" class="left">&lt;</a> <a href="#" class="right">&gt;</a></div></div><!-- 侧拉导航 --><nav class="allcenter"><ul id="leftnav"><li><em class="iconfont icontitle">&#xe639;</em> <span class="leftnavtitle"><a href="">苏宁生鲜</a> <i class="iconfont">&#xe61f;</i> </span><span class="leftnavtxt"><a href="">水果</a> <a href="">精选好肉</a></span></li><li><em class="iconfont icontitle">&#xe632;</em> <span class="leftnavtitle"><a href="">酒水 饮料</a> <i class="iconfont">&#xe61f;</i> </span><span class="leftnavtxt"><a href="">啤酒</a> <a href="" style="color: red;">酸奶</a> <a href="" style="color: red;">咖啡</a></span></li><li><em class="iconfont icontitle">&#xe8b8;</em> <span class="leftnavtitle"><a href="">粮油干货 零食 宠物</a> <i class="iconfont">&#xe61f;</i> </span><span class="leftnavtxt"><a href="" style="color: red;">食用油</a> <a href="" style="color: red;">坚果蜜饯</a> <a href="">宠物食品</a></span></li><li><em class="iconfont icontitle">&#x3443;</em> <span class="leftnavtitle"><a href="">纸品清洁</a> <i class="iconfont">&#xe61f;</i> </span><span class="leftnavtxt"><a href="">抽纸</a> <a href="">洗衣液</a> <a href="">卷纸</a> <a href="">收纳</a></span></li><li><em class="iconfont icontitle">&#xe677;</em> <span class="leftnavtitle"><a href="">美妆个护</a> <i class="iconfont">&#xe61f;</i> </span><span class="leftnavtxt"><a href="">洗面奶</a> <a href="" style="color: red;">面膜</a> <a href="">姨妈巾</a> <a href="" style="color: red;">洗护</a></span></li><li><em class="iconfont icontitle">&#xe670;</em> <span class="leftnavtitle"><a href="">苏宁健康</a> <i class="iconfont">&#xe61f;</i> </span><span class="leftnavtxt"><a href="">血压计</a> <a href="" style="color: red;">成人用品</a></span></li></ul><article class="navcontbox"><section class="navcont"><!--    <div class="navcell">
+                  <p>热搜排行</p>
+                  <span>
+                   <a>新鲜水果</a>
+                   <a>精选肉类</a>
+                  </span>
+                </div> --></section></article></nav><!-- 超市头条 --><!-- 美味生鲜 --></section><!-- content --><section class="content allcenter"><article id="part1"><div class="ranktitle"><span id="part10">排/行/榜</span><aside>RANKING LIST</aside></div><ul id="rank"><li class="active"><i class="iconfont">&#xe656;</i> <span>宠物</span></li><li><i class="iconfont">&#xe605;</i> <span>个人护理</span></li><li><i class="iconfont">&#xe69c;</i> <span>中外名酒</span></li><li><i class="iconfont">&#xe8b8;</i> <span>粮油米面</span></li><li><i class="iconfont">&#xe677;</i> <span>美妆</span></li><li><i class="iconfont">&#xe6da;</i> <span>乳制品</span></li><li><i class="iconfont">&#xe53a;</i> <span>水饮冲调</span></li><li><i class="iconfont">&#xe612;</i> <span>苏宁生鲜</span></li><li><i class="iconfont">&#x35bb;</i> <span>休闲零食</span></li><li><i class="iconfont">&#xe602;</i> <span>医药保健</span></li><li><i class="iconfont">&#xe617;</i> <span>纸品清洁</span></li><li><i class="iconfont">&#xe652;</i> <span>进口食品</span></li></ul><!-- 商品 --><ul class="rankshop"><!-- 假数据 --><!-- <li class="goods_item">
+                  <div class="goods_pic">
+                    <img src="images/ia_100000016.jpg" alt="">
+                  </div>
+                  <div class="goods_title">
+                    <p>西西猫膨润土猫砂10公斤除臭结团猫沙膨润土低尘猫砂20斤10kg猫咪用品</p>
+                  </div>
+                  <div class="goods_price">
+                    <p>￥135.00</p>
+                    <i id="0" class="sc_btn iconfont">&#xe62e;</i>
+                  </div>  
+              </li> --></ul></article><article id="part2"><div class="ranktitle"><span>超/级/市/场</span><aside>THE SUPER MARKET</aside></div><div class="supershop"><!-- <div class="supertitle">
+              <em class="iconfont">&#xe62b;</em>
+              <aside>苏宁生鲜</aside>
+              <i class="iconfont">&#xe502;</i>
+            </div>
+            <div class="shopbox allcenter">
+              <div class="itemsleft">
+                <a href="">
+                  <img src="images/ia_100000046.jpg" alt="">
+                </a>
+                <div class="card">
+                  <ul class="cardlist">
+                    <li><a href="">新鲜水果</a></li> 
+                    <li><a href="">精品肉类</a></li>
+                    <li><a href="">安心蛋类</a></li>
+                    <li><a href="">素食饮品</a></li> 
+                  </ul>
+                </div>
+              </div>
+              <div class="goods">
+                <ul id="goodslist">
+                  <li class="goods_item">
+                    <div class="goods_pic">
+                      <img src="images/ia_100000016.jpg" alt="">
+                    </div>
+                    <div class="goods_title">
+                      <p>西西猫膨润土猫砂10公斤除臭结团猫沙膨润土低尘猫砂20斤10kg猫咪用品</p>
+                    </div>
+                    <div class="goods_price">
+                      <p>￥135.00</p>
+                      <i id="0" class="sc_btn iconfont">&#xe62e;</i>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            
+            </div>
+          </div> --></div></article></section><!-- 抛物线小球 --><div id="ball"></div><!-- 右边侧拉信息框 --><section class="shopcarbox"><div class="snbar"><img src="images/ia_100000288.png" alt=""><!-- <article id="mall"></article>  --></div><div style="top:20%;"><p><em class="iconfont">&#xe508;</em><!-- <div id="usertips"></div> --></p></div><div class="shopcar"><i class="iconfont">&#xe62e;</i><aside>购物车</aside><u id="shopcarnum">0</u><!-- <article class="shopMsgBox"></article> --></div><div style="top:45%;"><p><em class="iconfont">&#xe687;</em> <span>消息</span></p></div><div style="top:55%;"><p><em class="iconfont">&#xe624;</em><span>理财</span></p><p><em class="iconfont">&#xe66c;</em><span>足迹</span></p><p><em class="iconfont">&#xe607;</em><span>签到</span></p></div><div style="top:75%;"><p><em class="iconfont">&#xe60f;</em><span>在线咨询</span></p><p><em class="iconfont">&#xe9af;</em><span>意见反馈</span></p><p><em class="iconfont">&#xe650;</em> <span class="download"><img src="images/ia_100000001.jpg" alt=""></span></p></div><div class="returntop"><a href=""><i class="iconfont">&#xe657;</i> <span>返回顶部</span></a></div></section><!-- 右边购物车 --><section class="sideBox"><article class="shopCarNumBox"><!-- <div class="snbar">
+              <img src="images/ia_100000288.png" alt="">
+            </div> --><div class="sideBoxTop"><input type="checkbox" id="checked-all"><p><span>共<u class="sum-num">0</u>件，已选<u class="check-sum">0</u>件</span></p><a href=""><span>查看全部</span></a></div><div class="sc_content"><ul></ul></div><div class="sideBoxFoot"><div class="cartinfro"><div class="cartinfro-left"><p id="checkedSum">已选&nbsp;<u>0</u>&nbsp;件</p><p id="moneySum">总价:&nbsp;<u>0</u></p></div><a href="" class="ok">去购物车结算<!-- <i></i> --></a></div></div><!-- <div class="sc_pic">
+              <div class="sc_num"> 0</div>
+            </div> --></article></section><!-- 底部 --><footer class="allcenter"></footer></body><script src="data.js"></script><script src="goodslist.js"></script><script src="nav.js"></script><script src="shopcar.js"></script></html>

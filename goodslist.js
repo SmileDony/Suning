@@ -1,8 +1,11 @@
-$(function(){
+define(["jquery","jquery-cookie"], function($){
+  function body(){
+
+        $(function(){
    
-    $.ajax({
-        url:"./goodsList.json",
-        success:function(arr){
+         $.ajax({
+            url:"./goodsList.json",
+            success:function(arr){
            
             for(var i = 0; i < arr.length; i++){
                 var node = $(`
@@ -61,7 +64,13 @@ $(function(){
         error:function(msg){
             console.log(msg);
         }
-    })
-})
+      })
+  })
+
+}
+return {
+  body:body  
+ }
+})   
 
             
