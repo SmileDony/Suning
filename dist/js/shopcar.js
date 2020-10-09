@@ -1,3 +1,8 @@
+define(["jquery","jquery-cookie","parabola"], function($){
+  function body(){
+
+
+
 // var num = null;
 var num=0;
 var money=0;
@@ -318,3 +323,11 @@ for(var i = 0;i < goods_num_id.length;i ++){
   }
   
 }
+
+
+
+}
+return {
+  body:body  
+ }
+})  

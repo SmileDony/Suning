@@ -22,7 +22,7 @@ $(function(){
             <p>${arr[0].childs[i].name}</p>
           </div>
           <div class="goods_price">
-            <p>￥${arr[0].childs[i].price}</p>
+            <p>￥<b>${arr[0].childs[i].price}</b></p>
             <i id="${arr[0].childs[i].id}" class="sc_btn iconfont">&#xe62e;</i>
           </div>
       </li>`
@@ -187,6 +187,7 @@ $(function(){
               }
             }
           }
+          console.log(newArr);
           //通过newArr。处理数据，将数据添加页面上
           var str = ``;
           for(var i = 0; i < newArr.length; i++){
@@ -212,6 +213,28 @@ $(function(){
           </li>`;
           }
           $(".sc_content ul").html(str);
+
+        //   var list=``;
+        //   for(var k = 0; k < newArr.length; k++){
+        //     list+=`<li>
+        //     <div class="yes">
+        //       <input type="checkbox">
+        //     </div>
+        //     <div class="goodsPic">
+        //       <img src="${arr[0].childs[i].img}" alt="">
+        //       <a>${arr[0].childs[i].name}t</a>
+        //     </div>
+        //     <p class="uint-price">￥<b>149</b></p>
+        //     <div class="goodsNum">
+        //         <button>+</button>
+        //         <span>${newArr[i].num}</span>
+        //         <button>-</button>
+        //     </div>
+        //     <p class="sum-price">￥<b>${newArr[i].price}</b></p>  
+        //   <div class="delete">删除</div>
+        // </li>`
+        //   }
+          // $(".orderbox .orderboxbottom").html(str);
         },
         error: function(msg){
           console.log(msg);
@@ -277,25 +300,6 @@ $(function(){
     console.log(money);
     console.log(goods_money);
   }
-// 动画函数
-//    aClose.onclick = function () {
-//         oDiv.setAttribute('style','animation:closeTime 1s ease-in-out 0ms 1 normal');
-//         setTimeout(function () {
-//             oDiv.removeAttribute('style');
-//             oDiv.style.marginRight = "-128px";
-//             aClose.style.display = "none";
-//             aOpen.style.display = "block";
-//         },1000);
-//     };
-//     aOpen.onclick = function () {
-//         oDiv.setAttribute('style','animation:closeTime 1s ease-in-out 0ms 1 reverse');
-//         setTimeout(function () {
-//             oDiv.removeAttribute('style');
-//             oDiv.style.marginRight = "0";
-//             aClose.style.display = "block";
-//             aOpen.style.display = "none";
-//         },1000);
-//     };
 
 //全选按钮选中状态判断sideBoxTop
 $(".sideBoxTop").on("input","#checked-all",checkall);
