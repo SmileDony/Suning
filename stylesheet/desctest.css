@@ -381,15 +381,13 @@ header div{
 #small {
     width: 400px;
     height: 400px;
-    border: 1px solid #999;
+    border: 1px solid black;
     position: relative;
-    margin: 10px 0;
 }
 
 #small img {
     width: 400px;
     height: 400px;
-    border: none;
 }
 
 #mark {
@@ -403,22 +401,7 @@ header div{
     top: 0px;
     display: none;
 }
-#choice{
-    display: flex;
-    padding: 10px 2px;
-    justify-content: space-between;
-    align-items: center;
-    /* margin-top: 0px; */
-}
-#choice li:hover {
-    width: 60px;
-    height: 60px;
-    border: 1px solid red;
-}
-#choice li img{
-    width:60px;
-    height: 60px;
-}
+
 #big {
     width: 200px;
     height: 200px;
@@ -453,16 +436,9 @@ header div{
     line-height: 24px;
 }
 .des-mid-2{
-    height: 128px;
-    /* padding-top: 10px; */
+    height: 120px;
+    padding-top: 10px;
     background: #FFF8F3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.mid2-cont{
-    width: 280px;
-    height: 128px;
 }
 .div-p{
     font-size: 12px;
@@ -485,19 +461,6 @@ header div{
     align-items: center;
     width: 240px;
     justify-content: space-around;
-}
-.mid2-bg{
-    position: relative;
-    width: 234px;
-    height: 128px;
-    background: url(../desimages/ia_100000032.gif);
-}
-.mid2-bg img{
-    position: absolute;
-    right: 14px;
-    top:15px;
-    width: 100px;
-    height: 100px;
 }
 .div-t{
     display: block;

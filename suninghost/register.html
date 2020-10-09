@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/index5.min.css">
+    <script src="js/require.js" async = "true" defer data-main ="js/main5"></script>
+
+    <style>
+        #alert{
+            width: 400px;
+            height: 50px;
+            margin-top: 64px;
+            text-align: center;
+            line-height: 50px;
+            display: none;
+        }
+    </style>
+    <script type="module">
+        import ajax from './ajax.js';
+        var oBtn = document.getElementById("f");
+        var aInput = document.querySelectorAll(".form input");
+        var oAlert = document.querySelector("#alert");
+             
+        oBtn.onclick = function(){
+
+            ajax({
+                type:'post',
+                url:'index5.php',
+                data:{
+                    phone:aInput[0].value,
+                    username:aInput[1].value,
+                    password:aInput[2].value,
+                    
+                    createTime:new Date().getTime()
+                },
+                success:function(msg){
+                    console.log(msg)
+                    var obj = JSON.parse(msg);
+                    oAlert.style.display = 'block';
+                    oAlert.innerHTML = obj.msg;
+                },
+                error:function(msg){
+                    console.log(msg);
+                }
+            })
+        }
+
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <div id="div1-1">
+        <div id = "a" class = 'form'> <div id = "a1">中国+86</div> <div id = "a2"><input type="text"  value="请填写常用手机号" onfocus="if (value =='请填写常用手机号'){value =''}" onblur="if (value ==''){value='请填写常用手机号'}"></div></div>
+        <div id = "b"><label for="">手机验证码</label> <div id = "b1"><input type="text"  value="输入验证码" onfocus="if (value =='输入验证码'){value =''}" onblur="if (value ==''){value='输入验证码'}"></div> <div id = "b2">获取验证码</div></div>
+        <div id = "c" class = 'form'> <div id = "c1">用户名</div> <div id = "c2"><input type="text"  value="您的账户名和登录名" onfocus="if (value =='您的账户名和登录名'){value =''}" onblur="if (value ==''){value='您的账户名和登录名'}"></div></div>
+        <div id = "d" class="form"><div id = "d1">设置密码</div> <div id = "d2"><input type="text" value="建议使用两种或两种以上字符" onfocus="if (value =='建议使用两种或两种以上字符'){value =''}" onblur="if (value ==''){value='建议使用两种或两种以上字符'}"></div></div>
+        <div id = "e"><input type="checkbox"> <span>我已阅读并同意《苏宁企业用户注册协议》</span></div>
+        <div id = "f">下一步</div>
+        <div id = "g"><span>个人用户注册</span><span>海外用户注册</span></div>
+            <div id="alert">...</div>
+    </div>
+    </div>
+</body>
+</html>

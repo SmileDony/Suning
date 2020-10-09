@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登陆</title>
+    <link rel="stylesheet" href="css/index6.min.css">
+    <script src="js/require.js" async = "true" defer data-main ="js/main6"></script>
+
+    <style>
+        #alert{
+            width: 304px;
+            height: 30px;
+            margin: auto;
+            margin-top: 16px;
+            line-height: 30px;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class = "a1 center">
+        <img src="./images6/ia_100000007.png" alt="">
+        <img src="./images6/ia_200000003.png" alt="" srcset="">
+        <div id="head1">
+            <img src="./images6/ia_200000004.png" alt="" srcset="">
+            <span>登录页面，调查问卷</span>
+        </div>
+    </div>
+
+    <div id="b1">
+        
+        <div id="b1-1"><img src="./images6/ia_200000006.png" alt="">依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版《苏宁隐私政策》已上线，将更有利于保护您的个人隐私。</div>
+    </div>
+
+    <div id="c1">
+        <div id="c1-1">
+            <div id="c2">
+                <div id="t1"><span><img src="./images6/ia_200000006.png" alt="">苏宁不会以任何理由要求您转账汇款，谨防诈骗。</span></div>
+            
+                <div id="t2"><div><a href=""> 扫码登录</a></div><div><a href="">账户登录</a></div></div>
+            
+                <div id = "d" class = "form"><div id = "d1"></div> <div id = "d2"><input type="text" value="邮箱/用户名/登录手机" onfocus="if (value =='邮箱/用户名/登录手机'){value =''}" onblur="if (value ==''){value='邮箱/用户名/登录手机'}"></div></div>
+
+                <div id = "e" class = "form"><div id = "e1"></div> <div id = "e2"><input type="text" value="密码" onfocus="if (value =='密码'){value =''}" onblur="if (value ==''){value='密码'}"></div></div>
+
+                <div id="t3"><a href="">忘记密码</a></div>
+
+                <div id="t4">登录</div>
+
+                <div id = "alert">tttt</div>
+
+                <div id="t5">
+                    <div id="t5-1">
+                    <div id = "i1"></div>
+                    <span> <a href="">QQ</a> </span>
+                    <span>|</span>
+                    <div id = "i2"></div>
+                    <span> <a href=""> 微信</a></span>
+
+                    <div id = "tri">
+                        <div></div>
+                        <a href="">立即注册</a>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type = "module">
+    import ajax from './ajax.js';
+
+    var oBtn = document.getElementById("t4");
+  var aInput = document.querySelectorAll(".form input");
+  var oAlert = document.querySelector("#alert");
+  oBtn.onclick = function(){ 
+      ajax({
+          type:'post',
+          url:'index6.php',
+          data:{
+              username:aInput[0].value,
+              password:aInput[1].value
+          },
+          success:function(msg){
+              var obj = JSON.parse(msg);
+              oAlert.style.display = 'block';
+              oAlert.innerHTML = obj.msg;
+              location.href="index5.html";
+          },
+          error:function(msg){
+              console.log(msg);
+          }
+      })
+  }
+</script>
+</html>
