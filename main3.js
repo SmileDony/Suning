@@ -15,6 +15,8 @@ require.config({
     }
 })
 
-require(["index3"] , function(index3){
-    test1.body()
+require(["data","goodslist","shopcar"] , function(data, goodslist,shopcar){
+    data.body()
+    goodslist.body()
+    shopcar.body()
 })

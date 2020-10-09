@@ -1,8 +1,10 @@
-define([
-    'jquery',
-    'jquery-cookie'
-], function($) {
-    function body(){
+// define([
+//     'jquery',
+//     'jquery-cookie'
+// ], function($) {
+//     function body(){
+
+
         $(function(){
 
             //先加载右侧购物车的内容  数据从cooke里面找
@@ -242,10 +244,12 @@ define([
                         
               
         })
-    }
-
-    return{
-        body:body
-    }
     
-});
+    
+//     }
+
+//     return{
+//         body:body
+//     }
+    
+// });
